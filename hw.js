@@ -6,18 +6,17 @@ the list and checks that the current name is in the string passed in. The output
 let dog_string = "Hello Max, my name is Dog, and I have purple eyes!"
 let dog_names = ["Max","HAS","PuRple","dog"]
 
-function findWords(aString, aArray){
-    for (let i = 0; i < aArray.length; i++) {
-        if (aString.toLowerCase().includes(aArray[i].toLowerCase())) {      //used .toLowerCase like .lower()
-            console.log(`Matched ${aArray[i]}`); 
+function wordMatch(aStr, anArr){
+    for (let i = 0; i < anArr.length; i++) {
+        if (aStr.toLowerCase().includes(anArr[i].toLowerCase())) {
+            console.log(`Matched ${anArr[i]}`) 
         } else {
-            console.log('No match');
+            console.log('No match')
         }
     }
 }
-
 //Call method here with parameters
-findWords(dog_string, dog_names)
+wordMatch(dog_string, dog_names)
 
 //============Exercise #2 ============//
 /*Write a function that takes in an array and removes every even index with a splice,
